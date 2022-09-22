@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
   ${AreaEstudio()}  
   `;
   NombreDeLibros();    
-
-
  
 App.addEventListener('click', (e)=>{
  
