@@ -97,7 +97,7 @@ return fetch(`${API_URL}/${API_CAP_LIBRO}`, {
              
         mesaEstudio.innerHTML= `
         <div class='titulo-libro'>
-         <span class='menos'><</span>${libro} ${numeroCapitulo}<span class='mas'>></span> 
+         <span class='menos'>< </span>${libro} ${numeroCapitulo}<span class='mas'> ></span> 
        </div>`;    
      
       
