@@ -13491,6 +13491,7 @@ p {
   font-size: 2rem; }
 
 body {
+  overscroll-behavior-y: contain;
   background: rgba(233, 228, 228, 0.438);
   height: 80rem; }
   body .entorno {
