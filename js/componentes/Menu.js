@@ -1,4 +1,4 @@
-import { textoAleatorio } from "../funciones/Funciones.js";
+ import { textoAleatorio } from "../funciones/texto_aleatorio.js"; 
 
 export default function Menu(){
   

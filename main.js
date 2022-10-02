@@ -1,7 +1,23 @@
+let url = window.location.href;
+let swLocation = '/bibliapp/sw.js';
+
+
+if(navigator.serviceWorker){ 
+  if ( url.includes('localhost') ) {
+    swLocation = '/sw.js';
+  }  
+  navigator.serviceWorker.register(swLocation); 
+  console.log("SERVICEWORKER")     
+}
+
+
 import { Encabezado } from "./js/componentes/Encabezado.js";
 import Menu from "./js/componentes/Menu.js";
 import AreaEstudio from "./js/componentes/AreaEstudio.js";
-import { capituloDelLibro, libroCompleto, NombreDeLibros, numeroCapitulo, ultimoCapitulo } from "./js/funciones/Funciones.js";
+import { NombreDeLibros } from "./js/funciones/Funciones.js";
+import { libroCompleto, ultimoCapitulo } from "./js/funciones/libro_completo.js";
+import { capituloDelLibro, numeroCapitulo } from "./js/funciones/capitulo_del_libro.js";
+
 
 
 document.addEventListener("DOMContentLoaded", (e) => {   
@@ -14,30 +30,28 @@ document.addEventListener("DOMContentLoaded", (e) => {
   `;
   NombreDeLibros();    
  
-App.addEventListener('click', (e)=>{
+App.addEventListener('click', (e)=>{ 
  
   let numeroCap = parseInt(localStorage.getItem('numero-capitulo'));
   let getNombreLibro = localStorage.getItem('libroName');    
 
   if(e.target.classList.value === 'libros') NombreDeLibros();  
 
-  if(e.target.classList.value === 'btn-libro'){
-    
+  if(e.target.classList.value === 'btn-libro'){    
     localStorage.setItem('libroName', e.target.textContent);
-    let getNombreLibro = localStorage.getItem('libroName');     
-   
-    libroCompleto(e.target.textContent, getNombreLibro);  
-   
+    let getNombreLibro = localStorage.getItem('libroName');
+    libroCompleto(e.target.textContent, getNombreLibro); 
   }  
 
 
   if(e.target.classList.value === 'cuadro-capitulo'){      
-    localStorage.setItem('numero-capitulo', e.target.textContent);    
-    capituloDelLibro(getNombreLibro, e.target.textContent);   
-  }
-
+    localStorage.setItem('numero-capitulo', e.target.textContent); 
+    capituloDelLibro(getNombreLibro, e.target.textContent);    
+  }  
   
-  if(e.target.classList.value === 'mas' && numeroCapitulo+1 <= ultimoCapitulo){          
+
+  if((e.target.classList.value === 'mas' && numeroCapitulo+1 <= ultimoCapitulo) 
+      || (window.navigator.onLine === false && e.target.classList.value === 'mas')){    
      let sumarCapitulo = numeroCap +1;    
      localStorage.setItem('numero-capitulo', sumarCapitulo);     
      capituloDelLibro(getNombreLibro, sumarCapitulo );     
