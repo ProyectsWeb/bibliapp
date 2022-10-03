@@ -6,22 +6,21 @@ const INMUTABLE_CACHE = 'inmutable-v1';
 
 const APP_SHELL = [
    /*  '/', */
-    '/index.html',
-    '/css/style.css',
-    '/public/bibliapp.png',
-    '/public/vite.svg',    
-    '/js/componentes/AreaEstudio.js',
-    '/js/componentes/Encabezado.js',
-    '/js/componentes/Menu.js',
-    '/js/funciones/capitulo_del_libro.js',
-    '/js/funciones/Funciones.js',
-    '/js/funciones/libro_completo.js',
-    '/js/funciones/libros.js',    
-    '/js/funciones/texto_aleatorio.js',
-    '/js/helpers/sw-utils.js',
-    '/js/helpers/wp_api.js',
-    '/main.js',
-    '/sw.js' 
+    'index.html',
+    'css/style.css',
+    'public/bibliapp.png',
+    'public/vite.svg',    
+    'js/componentes/AreaEstudio.js',
+    'js/componentes/Encabezado.js',
+    'js/componentes/Menu.js',
+    'js/funciones/capitulo_del_libro.js',
+    'js/funciones/Funciones.js',
+    'js/funciones/libro_completo.js',
+    'js/funciones/libros.js',    
+    'js/funciones/texto_aleatorio.js',
+    'js/helpers/sw-utils.js',
+    'js/helpers/wp_api.js',
+    'main.js'    
 ];
  
 
