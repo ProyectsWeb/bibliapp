@@ -1,4 +1,3 @@
-
 importScripts('js/helpers/sw-utils.js');
 
 const STATIC_CACHE    = 'static-v1';
@@ -22,7 +21,7 @@ const APP_SHELL = [
     '/js/helpers/sw-utils.js',
     '/js/helpers/wp_api.js',
     '/main.js',
-    'sw.js' 
+    '/sw.js' 
 ];
  
 
