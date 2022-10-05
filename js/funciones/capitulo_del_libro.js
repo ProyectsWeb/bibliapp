@@ -56,8 +56,7 @@ export const capituloDelLibro = function(libro, capitulo){
   }
   )
   .then(response => response.json())
-      .then(response => {         
-        console.log(response)
+      .then(response => {               
        const mesaEstudio = document.querySelector('.mesa-estudio'); 
        const areaEstudio = document.querySelector('.area-estudio'); 
        
@@ -72,9 +71,8 @@ export const capituloDelLibro = function(libro, capitulo){
           mesaEstudio.innerHTML= `
           <div class='titulo-libro'>
            <span class='menos'>< </span>${libro} ${numeroCapitulo}<span class='mas'> ></span> 
-         </div>`;      
+         </div>`;       
   
-  console.log(response)
        response.sort( (a, b ) =>{         
         if(a.verse < b.verse){ return -1; }  
         if(a.verse > b.verse){ return 1;  }      
