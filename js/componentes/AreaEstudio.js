@@ -1,8 +1,4 @@
-
-export default function AreaEstudio(){
-    
-    return  `    
-    <div class='area-estudio'></div>      
-    <div class='mesa-estudio'></div>      
-    `;
-}
+export default function AreaEstudio(){return `    
+<div class='area-estudio'></div>      
+<div class='mesa-estudio'></div>      
+`}
