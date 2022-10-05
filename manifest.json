@@ -1,12 +1,15 @@
 
 {
+    "scope": "/",
     "name": "App de la Biblia",
     "short_name": "Bibliapp",
+    "description": "Bibliapp es una aplicacion de formato sencillo de facil manejo y lectura",
     "start_url": "index.html",
     "background_color": "#2667ff",
     "display": "standalone",
     "theme_color": "#2667ff",
     "orientation": "portrait",
+    "lang": "es-MX",
     "icons": [
         {
             "src": "public/icons/icon-72x72.webp",
